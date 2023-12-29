@@ -18,71 +18,72 @@
   
     <meta name="description" content="Redis一、基础篇1.初识redisSQL  vs  NOSQL  Redis  redis安装后的文件  redis-cli：是redis提供的命令行客户端 redis-server：是redis的服务端启动脚本 redis-sentinel：是redis的哨兵启动脚本  redis默认启动 安装完成后，在任意目录输入redis-server命令即可启动Redis： 1redis-server">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ketelin&#39;s Blog">
+<meta property="og:title" content="Redis">
 <meta property="og:url" content="http://example.com/2023/12/29/Redis/index.html">
 <meta property="og:site_name" content="ketelin&#39;s Blog">
 <meta property="og:description" content="Redis一、基础篇1.初识redisSQL  vs  NOSQL  Redis  redis安装后的文件  redis-cli：是redis提供的命令行客户端 redis-server：是redis的服务端启动脚本 redis-sentinel：是redis的哨兵启动脚本  redis默认启动 安装完成后，在任意目录输入redis-server命令即可启动Redis： 1redis-server">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231004154040483.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231004155044613.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20211211110439353.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231004191519461.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231004200553329.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231004201304314.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231004202645740.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231004203337817.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231004205325402.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231004205657077.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231007141946850.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231007144050173.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231007144344463.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231007144416152.png">
-<meta property="og:image" content="http://example.com/2023/12/29/Redis/Redis.assets/image-20231007151653550.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231007152140021.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231007153520645.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231007154644895.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231007155119070.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231007155713591.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231007161336577.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231007161356248.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231007162022611.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231007171023828.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231007171932284.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231007190019049.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231007191756423.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231007194909043.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231008142814660.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231008152754677.png">
-<meta property="og:image" content="http://example.com/2023/12/29/Redis/Redis.assets/image-20231008154033038.png">
-<meta property="og:image" content="http://example.com/2023/12/29/Redis/Redis.assets/image-20231008154251872.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231008202006008.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231008210003106.png">
-<meta property="og:image" content="http://example.com/2023/12/29/Redis/Redis.assets/image-20231009173556191.png">
-<meta property="og:image" content="http://example.com/2023/12/29/Redis/Redis.assets/image-20231009173746414.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231009202612354.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231009202726781.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231009203518721.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231011214836124.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231013155355194.png">
-<meta property="og:image" content="http://example.com/2023/12/29/Redis/Redis.assets/image-20231013162646868.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231013193636000.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231013200110785.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231013200150659.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231014152403261.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231015145922154.png">
-<meta property="og:image" content="http://example.com/2023/12/29/Redis/Redis.assets/image-20231017162430690.png">
-<meta property="og:image" content="http://example.com/Redis.assets/image-20231017162802476.png">
-<meta property="og:image" content="http://example.com/2023/12/29/Redis/Redis.assets/image-20231017185940643.png">
-<meta property="og:image" content="http://example.com/2023/12/29/Redis/Redis.assets/image-20231017190033013.png">
-<meta property="article:published_time" content="2023-12-29T09:06:04.875Z">
-<meta property="article:modified_time" content="2023-10-20T12:25:06.791Z">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231004154040483.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231004155044613.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20211211110439353.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231004191519461.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231004200553329.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231004201304314.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231004202645740.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231004203337817.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231004205325402.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231004205657077.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231007141946850.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231007144050173.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231007144344463.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231007144416152.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231007151653550.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231007152140021.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231007153520645.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231007154644895.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231007155119070.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231007155713591.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231007161336577.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231007161356248.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231007162022611.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231007171023828.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231007171932284.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231007190019049.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231007191756423.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231007194909043.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231008142814660.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231008152754677.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231008154033038.png">
+<meta property="og:image" content="c:/Users/linzh/Desktop/typora/image-20231008154251872.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231008202006008.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231008210003106.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231009173556191.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231009173746414.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231009202612354.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231009202726781.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231009203518721.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231011214836124.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231013155355194.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231013162646868.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231013193636000.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231013200110785.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231013200150659.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231014152403261.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231015145922154.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231017162430690.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231017162802476.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231017185940643.png">
+<meta property="og:image" content="http://example.com/2023/12/29/Redis/image-20231017190033013.png">
+<meta property="article:published_time" content="2023-12-29T12:24:19.000Z">
+<meta property="article:modified_time" content="2023-12-29T12:26:41.018Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="原创">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/Redis.assets/image-20231004154040483.png">
+<meta name="twitter:image" content="http://example.com/2023/12/29/Redis/image-20231004154040483.png">
   
   
   
-  <title>ketelin&#39;s Blog</title>
+  <title>Redis - ketelin&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -277,7 +278,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle" data-typed-text="Redis"></span>
           
         </div>
 
@@ -288,8 +289,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-12-29 17:06" pubdate>
-          2023年12月29日 下午
+        <time datetime="2023-12-29 20:24" pubdate>
+          2023年12月29日 晚上
         </time>
       </span>
     
@@ -356,15 +357,15 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header"></h1>
+            <h1 id="seo-header">Redis</h1>
             
             
               <div class="markdown-body">
                 
                 <h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1><h2 id="一、基础篇"><a href="#一、基础篇" class="headerlink" title="一、基础篇"></a>一、基础篇</h2><h3 id="1-初识redis"><a href="#1-初识redis" class="headerlink" title="1.初识redis"></a>1.初识redis</h3><p><strong>SQL</strong>  vs  <strong>NOSQL</strong></p>
-<p><img src="/Redis.assets/image-20231004154040483.png" srcset="/img/loading.gif" lazyload alt="image-20231004154040483"></p>
+<p><img src="/2023/12/29/Redis/image-20231004154040483.png" srcset="/img/loading.gif" lazyload alt="image-20231004154040483"></p>
 <p><strong>Redis</strong></p>
-<p><strong><img src="/Redis.assets/image-20231004155044613.png" srcset="/img/loading.gif" lazyload alt="image-20231004155044613"></strong></p>
+<p><strong><img src="/2023/12/29/Redis/image-20231004155044613.png" srcset="/img/loading.gif" lazyload alt="image-20231004155044613"></strong></p>
 <p>redis安装后的文件</p>
 <ul>
 <li>redis-cli：是redis提供的命令行客户端</li>
@@ -442,22 +443,22 @@
 <li><code>ping</code>：与redis服务端做心跳测试，服务端正常会返回<code>pong</code></li>
 </ul>
 <p>不指定commond时，会进入<code>redis-cli</code>的交互控制台：</p>
-<p><img src="/Redis.assets/image-20211211110439353.png" srcset="/img/loading.gif" lazyload alt="image-20211211110439353"></p>
-<h3 id="2-redis命令"><a href="#2-redis命令" class="headerlink" title="2.redis命令"></a>2.redis命令</h3><h4 id="Redis-数据结构介绍"><a href="#Redis-数据结构介绍" class="headerlink" title="Redis 数据结构介绍"></a><strong>Redis 数据结构介绍</strong></h4><p><img src="/Redis.assets/image-20231004191519461.png" srcset="/img/loading.gif" lazyload alt="image-20231004191519461"></p>
-<h4 id="Redis中String类型常见命令"><a href="#Redis中String类型常见命令" class="headerlink" title="Redis中String类型常见命令"></a><strong>Redis中String类型常见命令</strong></h4><p><img src="/Redis.assets/image-20231004200553329.png" srcset="/img/loading.gif" lazyload alt="image-20231004200553329"></p>
+<p><img src="/2023/12/29/Redis/image-20211211110439353.png" srcset="/img/loading.gif" lazyload alt="image-20211211110439353"></p>
+<h3 id="2-redis命令"><a href="#2-redis命令" class="headerlink" title="2.redis命令"></a>2.redis命令</h3><h4 id="Redis-数据结构介绍"><a href="#Redis-数据结构介绍" class="headerlink" title="Redis 数据结构介绍"></a><strong>Redis 数据结构介绍</strong></h4><p><img src="/2023/12/29/Redis/image-20231004191519461.png" srcset="/img/loading.gif" lazyload alt="image-20231004191519461"></p>
+<h4 id="Redis中String类型常见命令"><a href="#Redis中String类型常见命令" class="headerlink" title="Redis中String类型常见命令"></a><strong>Redis中String类型常见命令</strong></h4><p><img src="/2023/12/29/Redis/image-20231004200553329.png" srcset="/img/loading.gif" lazyload alt="image-20231004200553329"></p>
 <p><strong>Redis中key的结构</strong></p>
-<p><img src="/Redis.assets/image-20231004201304314.png" srcset="/img/loading.gif" lazyload alt="image-20231004201304314"></p>
-<h4 id="Redis中Hash类型常见命令"><a href="#Redis中Hash类型常见命令" class="headerlink" title="Redis中Hash类型常见命令"></a><strong>Redis中Hash类型常见命令</strong></h4><p><img src="/Redis.assets/image-20231004202645740.png" srcset="/img/loading.gif" lazyload alt="image-20231004202645740"></p>
-<h4 id="Redis中List类型常见命令"><a href="#Redis中List类型常见命令" class="headerlink" title="Redis中List类型常见命令"></a><strong>Redis中List类型常见命令</strong></h4><p><img src="/Redis.assets/image-20231004203337817.png" srcset="/img/loading.gif" lazyload alt="image-20231004203337817"> </p>
-<h4 id="Redis中Set类型常见命令"><a href="#Redis中Set类型常见命令" class="headerlink" title="Redis中Set类型常见命令"></a><strong>Redis中Set类型常见命令</strong></h4><p><img src="/Redis.assets/image-20231004205325402.png" srcset="/img/loading.gif" lazyload alt="image-20231004205325402"></p>
-<h4 id="Redis中SortedSet类型"><a href="#Redis中SortedSet类型" class="headerlink" title="Redis中SortedSet类型"></a><strong>Redis中SortedSet类型</strong></h4><p><img src="/Redis.assets/image-20231004205657077.png" srcset="/img/loading.gif" lazyload alt="image-20231004205657077"></p>
+<p><img src="/2023/12/29/Redis/image-20231004201304314.png" srcset="/img/loading.gif" lazyload alt="image-20231004201304314"></p>
+<h4 id="Redis中Hash类型常见命令"><a href="#Redis中Hash类型常见命令" class="headerlink" title="Redis中Hash类型常见命令"></a><strong>Redis中Hash类型常见命令</strong></h4><p><img src="/2023/12/29/Redis/image-20231004202645740.png" srcset="/img/loading.gif" lazyload alt="image-20231004202645740"></p>
+<h4 id="Redis中List类型常见命令"><a href="#Redis中List类型常见命令" class="headerlink" title="Redis中List类型常见命令"></a><strong>Redis中List类型常见命令</strong></h4><p><img src="/2023/12/29/Redis/image-20231004203337817.png" srcset="/img/loading.gif" lazyload alt="image-20231004203337817"> </p>
+<h4 id="Redis中Set类型常见命令"><a href="#Redis中Set类型常见命令" class="headerlink" title="Redis中Set类型常见命令"></a><strong>Redis中Set类型常见命令</strong></h4><p><img src="/2023/12/29/Redis/image-20231004205325402.png" srcset="/img/loading.gif" lazyload alt="image-20231004205325402"></p>
+<h4 id="Redis中SortedSet类型"><a href="#Redis中SortedSet类型" class="headerlink" title="Redis中SortedSet类型"></a><strong>Redis中SortedSet类型</strong></h4><p><img src="/2023/12/29/Redis/image-20231004205657077.png" srcset="/img/loading.gif" lazyload alt="image-20231004205657077"></p>
 <p><strong>SortedSet的用法</strong></p>
-<p><img src="/Redis.assets/image-20231007141946850.png" srcset="/img/loading.gif" lazyload alt="image-20231007141946850"></p>
-<h3 id="3-redis的Java客户端"><a href="#3-redis的Java客户端" class="headerlink" title="3.redis的Java客户端"></a>3.redis的Java客户端</h3><p><img src="/Redis.assets/image-20231007144050173.png" srcset="/img/loading.gif" lazyload alt="image-20231007144050173"></p>
-<h4 id="Jedis快速入门"><a href="#Jedis快速入门" class="headerlink" title="Jedis快速入门"></a><strong>Jedis快速入门</strong></h4><p><img src="/Redis.assets/image-20231007144344463.png" srcset="/img/loading.gif" lazyload alt="image-20231007144344463"></p>
-<p><img src="/Redis.assets/image-20231007144416152.png" srcset="/img/loading.gif" lazyload alt="image-20231007144416152"></p>
+<p><img src="/2023/12/29/Redis/image-20231007141946850.png" srcset="/img/loading.gif" lazyload alt="image-20231007141946850"></p>
+<h3 id="3-redis的Java客户端"><a href="#3-redis的Java客户端" class="headerlink" title="3.redis的Java客户端"></a>3.redis的Java客户端</h3><p><img src="/2023/12/29/Redis/image-20231007144050173.png" srcset="/img/loading.gif" lazyload alt="image-20231007144050173"></p>
+<h4 id="Jedis快速入门"><a href="#Jedis快速入门" class="headerlink" title="Jedis快速入门"></a><strong>Jedis快速入门</strong></h4><p><img src="/2023/12/29/Redis/image-20231007144344463.png" srcset="/img/loading.gif" lazyload alt="image-20231007144344463"></p>
+<p><img src="/2023/12/29/Redis/image-20231007144416152.png" srcset="/img/loading.gif" lazyload alt="image-20231007144416152"></p>
 <p>如图</p>
-<img src="Redis.assets/image-20231007151653550.png" srcset="/img/loading.gif" lazyload alt="image-20231007151653550" style="zoom: 67%;" />
+<img src="image-20231007151653550.png" srcset="/img/loading.gif" lazyload alt="image-20231007151653550" style="zoom: 67%;" />
 
 
 
@@ -470,29 +471,29 @@
 
 
 <h4 id="Jedis连接池"><a href="#Jedis连接池" class="headerlink" title="Jedis连接池"></a><strong>Jedis连接池</strong></h4><p>Jedis本身是线程不安全的，并且频繁的创建和销毁连接会有性能损耗，因此使用Jedis连接池代替Jedis直连方式</p>
-<p><img src="/Redis.assets/image-20231007152140021.png" srcset="/img/loading.gif" lazyload alt="image-20231007152140021">、</p>
+<p><img src="/2023/12/29/Redis/image-20231007152140021.png" srcset="/img/loading.gif" lazyload alt="image-20231007152140021">、</p>
 <p>更改建立连接的方式</p>
-<p><img src="/Redis.assets/image-20231007153520645.png" srcset="/img/loading.gif" lazyload alt="image-20231007153520645"></p>
-<h4 id="SpringDataRedis"><a href="#SpringDataRedis" class="headerlink" title="SpringDataRedis"></a><strong>SpringDataRedis</strong></h4><p><img src="/Redis.assets/image-20231007154644895.png" srcset="/img/loading.gif" lazyload alt="image-20231007154644895"></p>
-<p><img src="/Redis.assets/image-20231007155119070.png" srcset="/img/loading.gif" lazyload alt="image-20231007155119070"></p>
+<p><img src="/2023/12/29/Redis/image-20231007153520645.png" srcset="/img/loading.gif" lazyload alt="image-20231007153520645"></p>
+<h4 id="SpringDataRedis"><a href="#SpringDataRedis" class="headerlink" title="SpringDataRedis"></a><strong>SpringDataRedis</strong></h4><p><img src="/2023/12/29/Redis/image-20231007154644895.png" srcset="/img/loading.gif" lazyload alt="image-20231007154644895"></p>
+<p><img src="/2023/12/29/Redis/image-20231007155119070.png" srcset="/img/loading.gif" lazyload alt="image-20231007155119070"></p>
 <p><strong>SpringDataRedis使用</strong></p>
-<p><img src="/Redis.assets/image-20231007155713591.png" srcset="/img/loading.gif" lazyload alt="image-20231007155713591"></p>
+<p><img src="/2023/12/29/Redis/image-20231007155713591.png" srcset="/img/loading.gif" lazyload alt="image-20231007155713591"></p>
 <p>2.编写连接池配置信息，默认是lettuce</p>
-<p><img src="/Redis.assets/image-20231007161336577.png" srcset="/img/loading.gif" lazyload alt="image-20231007161336577"></p>
+<p><img src="/2023/12/29/Redis/image-20231007161336577.png" srcset="/img/loading.gif" lazyload alt="image-20231007161336577"></p>
 <p>3.方法测试</p>
-<p><img src="/Redis.assets/image-20231007161356248.png" srcset="/img/loading.gif" lazyload alt="image-20231007161356248"></p>
+<p><img src="/2023/12/29/Redis/image-20231007161356248.png" srcset="/img/loading.gif" lazyload alt="image-20231007161356248"></p>
 <p><strong>SpringDataRedis的序列化方式</strong></p>
 <p>RedisTemplate可以接受任意的Object作为值写入Redis，只不过写入之前会把Object序列化为字节形式，默认是采用JDK序列化，得到的结果是这样的</p>
-<p><img src="/Redis.assets/image-20231007162022611.png" srcset="/img/loading.gif" lazyload alt="image-20231007162022611"></p>
+<p><img src="/2023/12/29/Redis/image-20231007162022611.png" srcset="/img/loading.gif" lazyload alt="image-20231007162022611"></p>
 <p><strong>自定义RedisTemplate的序列化方式</strong></p>
-<p><img src="/Redis.assets/image-20231007171023828.png" srcset="/img/loading.gif" lazyload alt="image-20231007171023828"></p>
+<p><img src="/2023/12/29/Redis/image-20231007171023828.png" srcset="/img/loading.gif" lazyload alt="image-20231007171023828"></p>
 <h4 id="SpringRedisTemplate"><a href="#SpringRedisTemplate" class="headerlink" title="SpringRedisTemplate"></a>SpringRedisTemplate</h4><p>尽管JSON的序列化方式可以满足我们的需求，但仍然存在一些问题，如图：</p>
-<p><img src="/Redis.assets/image-20231007171932284.png" srcset="/img/loading.gif" lazyload alt="image-20231007171932284"></p>
+<p><img src="/2023/12/29/Redis/image-20231007171932284.png" srcset="/img/loading.gif" lazyload alt="image-20231007171932284"></p>
 <p>在反序列化时知道对象的类型，json序列化器会将类的class类型写入json结果中，存入redis，会带来额外的内存开销</p>
 <p> Spring默认提供了一个StringRedisTemplate类，它的key和value的序列化方式默认就是String方式。省去了我们自定义RedisTemplate的过程：</p>
-<p><img src="/Redis.assets/image-20231007190019049.png" srcset="/img/loading.gif" lazyload alt="image-20231007190019049"></p>
-<h2 id="二、实战篇"><a href="#二、实战篇" class="headerlink" title="二、实战篇"></a>二、实战篇</h2><h3 id="1-短信登录"><a href="#1-短信登录" class="headerlink" title="1.短信登录"></a>1.短信登录</h3><h4 id="项目结构和项目导入"><a href="#项目结构和项目导入" class="headerlink" title="项目结构和项目导入"></a><strong>项目结构和项目导入</strong></h4><p><img src="/Redis.assets/image-20231007191756423.png" srcset="/img/loading.gif" lazyload alt="image-20231007191756423"></p>
-<h4 id="基于Session实现登录"><a href="#基于Session实现登录" class="headerlink" title="基于Session实现登录"></a><strong>基于Session实现登录</strong></h4><p><img src="/Redis.assets/image-20231007194909043.png" srcset="/img/loading.gif" lazyload alt="image-20231007194909043"></p>
+<p><img src="/2023/12/29/Redis/image-20231007190019049.png" srcset="/img/loading.gif" lazyload alt="image-20231007190019049"></p>
+<h2 id="二、实战篇"><a href="#二、实战篇" class="headerlink" title="二、实战篇"></a>二、实战篇</h2><h3 id="1-短信登录"><a href="#1-短信登录" class="headerlink" title="1.短信登录"></a>1.短信登录</h3><h4 id="项目结构和项目导入"><a href="#项目结构和项目导入" class="headerlink" title="项目结构和项目导入"></a><strong>项目结构和项目导入</strong></h4><p><img src="/2023/12/29/Redis/image-20231007191756423.png" srcset="/img/loading.gif" lazyload alt="image-20231007191756423"></p>
+<h4 id="基于Session实现登录"><a href="#基于Session实现登录" class="headerlink" title="基于Session实现登录"></a><strong>基于Session实现登录</strong></h4><p><img src="/2023/12/29/Redis/image-20231007194909043.png" srcset="/img/loading.gif" lazyload alt="image-20231007194909043"></p>
 <h4 id="发送短信验证码"><a href="#发送短信验证码" class="headerlink" title="发送短信验证码"></a><strong>发送短信验证码</strong></h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Override</span><br><span class="hljs-keyword">public</span> Result <span class="hljs-title function_">sendCode</span><span class="hljs-params">(String phone, HttpSession session)</span> &#123;<br>    <span class="hljs-comment">//1.校验手机号</span><br>    <span class="hljs-keyword">if</span>(RegexUtils.isPhoneInvalid(phone))&#123;<br>        <span class="hljs-comment">//2.如果不符合，返回错误信息</span><br>        <span class="hljs-keyword">return</span> Result.fail(<span class="hljs-string">&quot;手机号格式错误！&quot;</span>);<br>    &#125;<br>    <span class="hljs-comment">//3.符合，生成验证码</span><br>    <span class="hljs-type">String</span> <span class="hljs-variable">code</span> <span class="hljs-operator">=</span> RandomUtil.randomNumbers(<span class="hljs-number">6</span>);<br><br>    <span class="hljs-comment">//4.保存验证码到session</span><br>    session.setAttribute(<span class="hljs-string">&quot;code&quot;</span>,code);<br><br>    <span class="hljs-comment">//5.发送验证码</span><br>    log.debug(<span class="hljs-string">&quot;发送短信验证码成功，验证码：&#123;&#125;&quot;</span>,code);<br>    <span class="hljs-comment">//返回ok</span><br>    <span class="hljs-keyword">return</span> Result.ok();<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <h4 id="短信验证码登录、注册"><a href="#短信验证码登录、注册" class="headerlink" title="短信验证码登录、注册"></a><strong>短信验证码登录、注册</strong></h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Override</span><br><span class="hljs-keyword">public</span> Result <span class="hljs-title function_">login</span><span class="hljs-params">(LoginFormDTO loginForm, HttpSession session)</span> &#123;<br>    <span class="hljs-comment">//1.校验手机号</span><br>    <span class="hljs-type">String</span> <span class="hljs-variable">phone</span> <span class="hljs-operator">=</span> loginForm.getPhone();<br>    <span class="hljs-keyword">if</span>(RegexUtils.isPhoneInvalid(phone))&#123;<br>        <span class="hljs-comment">//2.如果不符合，返回错误信息</span><br>        <span class="hljs-keyword">return</span> Result.fail(<span class="hljs-string">&quot;手机号格式错误！&quot;</span>);<br>    &#125;<br><br>    <span class="hljs-comment">//2.校验验证码</span><br>    <span class="hljs-type">Object</span> <span class="hljs-variable">cacheCode</span> <span class="hljs-operator">=</span> session.getAttribute(<span class="hljs-string">&quot;code&quot;</span>);<br>    <span class="hljs-type">String</span> <span class="hljs-variable">code</span> <span class="hljs-operator">=</span> loginForm.getCode();<br>    <span class="hljs-keyword">if</span>(cacheCode==<span class="hljs-literal">null</span>||!cacheCode.equals(code))&#123;<br>        <span class="hljs-comment">//3.不一致，报错</span><br>        <span class="hljs-keyword">return</span> Result.fail(<span class="hljs-string">&quot;验证码错误&quot;</span>);<br>    &#125;<br><br>    <span class="hljs-comment">//4.一致，根据手机号查询用户</span><br>    <span class="hljs-type">User</span> <span class="hljs-variable">user</span> <span class="hljs-operator">=</span> query().eq(<span class="hljs-string">&quot;phone&quot;</span>, phone).one();<br><br>    <span class="hljs-comment">//5.判断用户是否存在</span><br>    <span class="hljs-keyword">if</span>(user==<span class="hljs-literal">null</span>)&#123;<br>        <span class="hljs-comment">//6.不存在，创建新用户并保存</span><br>        user=creatUserWithPhone(phone);<br>    &#125;<br><br>    <span class="hljs-comment">//7.保存用户信息带session中</span><br>    session.setAttribute(<span class="hljs-string">&quot;user&quot;</span>,user);<br>    <span class="hljs-keyword">return</span> Result.ok();<br>&#125;<br><br><span class="hljs-keyword">private</span> User <span class="hljs-title function_">creatUserWithPhone</span><span class="hljs-params">(String phone)</span> &#123;<br>    <span class="hljs-type">User</span> <span class="hljs-variable">user</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">User</span>();<br>    user.setPhone(phone);<br>    user.setNickName(USER_NICK_NAME_PREFIX+RandomUtil.randomString(<span class="hljs-number">10</span>));<br>    save(user);<br>    <span class="hljs-keyword">return</span> user;<br>&#125;<br></code></pre></td></tr></table></figure>
@@ -503,7 +504,7 @@
 
 
 
-<h4 id="实现登录校验拦截器"><a href="#实现登录校验拦截器" class="headerlink" title="实现登录校验拦截器"></a>实现登录校验拦截器</h4><p><img src="/Redis.assets/image-20231008142814660.png" srcset="/img/loading.gif" lazyload alt="image-20231008142814660"></p>
+<h4 id="实现登录校验拦截器"><a href="#实现登录校验拦截器" class="headerlink" title="实现登录校验拦截器"></a>实现登录校验拦截器</h4><p><img src="/2023/12/29/Redis/image-20231008142814660.png" srcset="/img/loading.gif" lazyload alt="image-20231008142814660"></p>
 <p><strong>拦截器</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.hmdp.utils;<br><span class="hljs-keyword">import</span> com.hmdp.entity.User;<br><span class="hljs-keyword">import</span> org.springframework.web.servlet.HandlerInterceptor;<br><br><span class="hljs-keyword">import</span> javax.servlet.http.HttpServletRequest;<br><span class="hljs-keyword">import</span> javax.servlet.http.HttpServletResponse;<br><span class="hljs-keyword">import</span> javax.servlet.http.HttpSession;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">LoginInterceptor</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">HandlerInterceptor</span> &#123;<br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">preHandle</span><span class="hljs-params">(HttpServletRequest request, HttpServletResponse response, Object handler)</span> <span class="hljs-keyword">throws</span> Exception &#123;<br>        <span class="hljs-comment">//1.获取session</span><br>        <span class="hljs-type">HttpSession</span> <span class="hljs-variable">session</span> <span class="hljs-operator">=</span> request.getSession();<br>        <span class="hljs-comment">//2.获取session中的用户</span><br>        <span class="hljs-type">Object</span> <span class="hljs-variable">user</span> <span class="hljs-operator">=</span> session.getAttribute(<span class="hljs-string">&quot;user&quot;</span>);<br>        <span class="hljs-comment">//3.判断用户是否存在</span><br>        <span class="hljs-keyword">if</span>(user==<span class="hljs-literal">null</span>)&#123;<br>            <span class="hljs-comment">//4.不存在，拦截,返回401状态码</span><br>            response.setStatus(<span class="hljs-number">401</span>);<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>        &#125;<br>        <span class="hljs-comment">//5.存在，保存用户信息到ThreadLocal</span><br>        UserHolder.saveUser((User) user);<br><br>        <span class="hljs-comment">//6.放行</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>    &#125;<br><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">afterCompletion</span><span class="hljs-params">(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)</span> <span class="hljs-keyword">throws</span> Exception &#123;<br>        <span class="hljs-comment">//移除用户</span><br>        UserHolder.removeUser();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
@@ -525,8 +526,8 @@
 
 
 
-<h4 id="集群的session共享问题"><a href="#集群的session共享问题" class="headerlink" title="集群的session共享问题"></a>集群的session共享问题</h4><p><img src="/Redis.assets/image-20231008152754677.png" srcset="/img/loading.gif" lazyload alt="image-20231008152754677"></p>
-<h4 id="基于Redis实现共享session登录"><a href="#基于Redis实现共享session登录" class="headerlink" title="基于Redis实现共享session登录"></a>基于Redis实现共享session登录</h4><p><img src="Redis.assets/image-20231008154033038.png" srcset="/img/loading.gif" lazyload alt="image-20231008154033038" style="zoom:80%;" /><img src="Redis.assets/image-20231008154251872.png" srcset="/img/loading.gif" lazyload alt="image-20231008154251872" style="zoom:80%;" /></p>
+<h4 id="集群的session共享问题"><a href="#集群的session共享问题" class="headerlink" title="集群的session共享问题"></a>集群的session共享问题</h4><p><img src="/2023/12/29/Redis/image-20231008152754677.png" srcset="/img/loading.gif" lazyload alt="image-20231008152754677"></p>
+<h4 id="基于Redis实现共享session登录"><a href="#基于Redis实现共享session登录" class="headerlink" title="基于Redis实现共享session登录"></a>基于Redis实现共享session登录</h4><p><img src="image-20231008154033038.png" srcset="/img/loading.gif" lazyload alt="image-20231008154033038" style="zoom:80%;" /><img src="C:/Users/linzh/Desktop/typora/image-20231008154251872.png" srcset="/img/loading.gif" lazyload alt="image-20231008154251872" style="zoom:80%;" /></p>
 <p><strong>发送短信验证码：</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Resource</span><br><span class="hljs-keyword">private</span> StringRedisTemplate stringRedisTemplate;<br><br><span class="hljs-meta">@Override</span><br><span class="hljs-keyword">public</span> Result <span class="hljs-title function_">sendCode</span><span class="hljs-params">(String phone, HttpSession session)</span> &#123;<br>    <span class="hljs-comment">//1.校验手机号</span><br>    <span class="hljs-keyword">if</span>(RegexUtils.isPhoneInvalid(phone))&#123;<br>        <span class="hljs-comment">//2.如果不符合，返回错误信息</span><br>        <span class="hljs-keyword">return</span> Result.fail(<span class="hljs-string">&quot;手机号格式错误！&quot;</span>);<br>    &#125;<br>    <span class="hljs-comment">//3.符合，生成验证码</span><br>    <span class="hljs-type">String</span> <span class="hljs-variable">code</span> <span class="hljs-operator">=</span> RandomUtil.randomNumbers(<span class="hljs-number">6</span>);<br><br>    <span class="hljs-comment">//4.保存验证码到redis,2分钟过期</span><br>    stringRedisTemplate.opsForValue().set(RedisConstants.LOGIN_CODE_KEY +phone,code,RedisConstants.LOGIN_CODE_TTL, TimeUnit.MINUTES);<br><br>    <span class="hljs-comment">//5.发送验证码</span><br>    log.debug(<span class="hljs-string">&quot;发送短信验证码成功，验证码：&#123;&#125;&quot;</span>,code);<br>    <span class="hljs-comment">//返回ok</span><br>    <span class="hljs-keyword">return</span> Result.ok();<br>&#125;<br></code></pre></td></tr></table></figure>
 
@@ -536,7 +537,7 @@
 <p><strong>拦截器</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">LoginInterceptor</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">HandlerInterceptor</span> &#123;<br><br>    <span class="hljs-comment">//手动注入</span><br>    <span class="hljs-keyword">private</span> StringRedisTemplate stringRedisTemplate;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">LoginInterceptor</span><span class="hljs-params">(StringRedisTemplate stringRedisTemplate)</span> &#123;<br>        <span class="hljs-built_in">this</span>.stringRedisTemplate = stringRedisTemplate;<br>    &#125;<br><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">preHandle</span><span class="hljs-params">(HttpServletRequest request, HttpServletResponse response, Object handler)</span> <span class="hljs-keyword">throws</span> Exception &#123;<br>        <span class="hljs-comment">//1.获取请求头中的token</span><br>        <span class="hljs-type">String</span> <span class="hljs-variable">token</span> <span class="hljs-operator">=</span> request.getHeader(<span class="hljs-string">&quot;authorization&quot;</span>);<br>        <span class="hljs-keyword">if</span>(StrUtil.isBlank(token))&#123;<br>            <span class="hljs-comment">//4.不存在，拦截,返回401状态码</span><br>            response.setStatus(<span class="hljs-number">401</span>);<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>        &#125;<br>        <span class="hljs-comment">//2.基于token获取redis中的用户</span><br>        Map&lt;Object, Object&gt; userMap = stringRedisTemplate.opsForHash().entries(RedisConstants.LOGIN_USER_KEY + token);<br>        <span class="hljs-comment">//3.判断用户是否存在</span><br>        <span class="hljs-keyword">if</span>(userMap.isEmpty())&#123;<br>            <span class="hljs-comment">//4.不存在，拦截,返回401状态码</span><br>            response.setStatus(<span class="hljs-number">401</span>);<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>        &#125;<br>        <span class="hljs-comment">//5.将查询到的Hash数据转化为UserDTO</span><br>        <span class="hljs-type">UserDTO</span> <span class="hljs-variable">userDTO</span> <span class="hljs-operator">=</span> BeanUtil.fillBeanWithMap(userMap, <span class="hljs-keyword">new</span> <span class="hljs-title class_">UserDTO</span>(), <span class="hljs-literal">false</span>);<br>        <span class="hljs-comment">//6.存在，保存用户信息到ThreadLocal</span><br>        UserHolder.saveUser(userDTO);<br><br>        <span class="hljs-comment">//7.刷新token有效期</span><br>        stringRedisTemplate.expire(LOGIN_USER_KEY+token,LOGIN_USER_TTL, TimeUnit.MINUTES);<br>        <span class="hljs-comment">//8.放行</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>    &#125;<br></code></pre></td></tr></table></figure>
 
-<h4 id="解决状态登录刷新的问题"><a href="#解决状态登录刷新的问题" class="headerlink" title="解决状态登录刷新的问题"></a><strong>解决状态登录刷新的问题</strong></h4><p><img src="/Redis.assets/image-20231008202006008.png" srcset="/img/loading.gif" lazyload alt="image-20231008202006008"></p>
+<h4 id="解决状态登录刷新的问题"><a href="#解决状态登录刷新的问题" class="headerlink" title="解决状态登录刷新的问题"></a><strong>解决状态登录刷新的问题</strong></h4><p><img src="/2023/12/29/Redis/image-20231008202006008.png" srcset="/img/loading.gif" lazyload alt="image-20231008202006008"></p>
 <p>直接放行</p>
 <p><strong>RefreshTokenInterceptor中的代码</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//1.获取请求头中的token</span><br><span class="hljs-type">String</span> <span class="hljs-variable">token</span> <span class="hljs-operator">=</span> request.getHeader(<span class="hljs-string">&quot;authorization&quot;</span>);<br><span class="hljs-keyword">if</span>(StrUtil.isBlank(token))&#123;<br><br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br><span class="hljs-comment">//2.基于token获取redis中的用户</span><br>Map&lt;Object, Object&gt; userMap = stringRedisTemplate.opsForHash().entries(RedisConstants.LOGIN_USER_KEY + token);<br><span class="hljs-comment">//3.判断用户是否存在</span><br><span class="hljs-keyword">if</span>(userMap.isEmpty())&#123;<br><br>   <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br><br></code></pre></td></tr></table></figure>
@@ -554,7 +555,7 @@
 
 
 
-<h3 id="2-商户查询缓存"><a href="#2-商户查询缓存" class="headerlink" title="2.商户查询缓存"></a>2.商户查询缓存</h3><h4 id="添加商户缓存"><a href="#添加商户缓存" class="headerlink" title="添加商户缓存"></a>添加商户缓存</h4><p><img src="/Redis.assets/image-20231008210003106.png" srcset="/img/loading.gif" lazyload alt="image-20231008210003106"></p>
+<h3 id="2-商户查询缓存"><a href="#2-商户查询缓存" class="headerlink" title="2.商户查询缓存"></a>2.商户查询缓存</h3><h4 id="添加商户缓存"><a href="#添加商户缓存" class="headerlink" title="添加商户缓存"></a>添加商户缓存</h4><p><img src="/2023/12/29/Redis/image-20231008210003106.png" srcset="/img/loading.gif" lazyload alt="image-20231008210003106"></p>
 <p><strong>ShopControll代码</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@GetMapping(&quot;/&#123;id&#125;&quot;)</span><br><span class="hljs-keyword">public</span> Result <span class="hljs-title function_">queryShopById</span><span class="hljs-params">(<span class="hljs-meta">@PathVariable(&quot;id&quot;)</span> Long id)</span> &#123;<br>    <span class="hljs-keyword">return</span> shopService.queryById(id);<br>&#125;<br></code></pre></td></tr></table></figure>
 
@@ -654,14 +655,14 @@
 <ul>
 <li>先删除缓存，再操作数据库<br>删除缓存的操作很快，但是更新数据库的操作相对较慢，如果此时有一个线程2刚好进来查询缓存，由于我们刚刚才删除缓存，所以线程2需要查询数据库，并写入缓存，但是我们更新数据库的操作还未完成，所以线程2查询到的数据是脏数据，出现线程安全问题</li>
 </ul>
-<img src="Redis.assets/image-20231009173556191.png" srcset="/img/loading.gif" lazyload alt="image-20231009173556191" style="zoom:80%;" />
+<img src="image-20231009173556191.png" srcset="/img/loading.gif" lazyload alt="image-20231009173556191" style="zoom:80%;" />
 
 <ul>
 <li><p>先操作数据库，再删除缓存</p>
 <p>线程1在查询缓存的时候，缓存TTL刚好失效，需要查询数据库并写入缓存，这个操作耗时相对较短（相比较于上图来说），但是就在这么短的时间内，线程2进来了，更新数据库，删除缓存，但是线程1虽然查询完了数据（更新前的旧数据），但是还没来得及写入缓存，所以线程2的更新数据库与删除缓存，并没有影响到线程1的查询旧数据，写入缓存，造成线程安全问题</p>
 </li>
 </ul>
-<img src="Redis.assets/image-20231009173746414.png" srcset="/img/loading.gif" lazyload alt="image-20231009173746414" style="zoom:80%;" />
+<img src="image-20231009173746414.png" srcset="/img/loading.gif" lazyload alt="image-20231009173746414" style="zoom:80%;" />
 
 
 
@@ -753,14 +754,14 @@
 <li>利用锁的互斥性，假设线程过来，只能一个人一个人的访问数据库，从而避免对数据库频繁访问产生过大压力，但这也会影响查询的性能，将查询的性能从并行变成了串行，我们可以采用tryLock方法+double check来解决这个问题</li>
 <li>线程1在操作的时候，拿着锁把房门锁上了，那么线程2、3、4就不能都进来操作数据库，只有1操作完了，把房门打开了，此时缓存数据也重建好了，线程2、3、4直接从redis中就可以查询到数据。</li>
 </ul>
-<p><img src="/Redis.assets/image-20231009202612354.png" srcset="/img/loading.gif" lazyload alt="image-20231009202612354"></p>
+<p><img src="/2023/12/29/Redis/image-20231009202612354.png" srcset="/img/loading.gif" lazyload alt="image-20231009202612354"></p>
 <ul>
 <li><strong>解决方案二</strong>：逻辑过期方案</li>
 <li>方案分析：我们之所以会出现缓存击穿问题，主要原因是在于我们对key设置了TTL，如果我们不设置TTL，那么就不会有缓存击穿问题，但是不设置TTL，数据又会一直占用我们的内存，所以我们可以采用逻辑过期方案</li>
 <li>我们之前是TTL设置在redis的value中，注意：这个过期时间并不会直接作用于Redis，而是我们后续通过逻辑去处理。假设线程1去查询缓存，然后从value中判断当前数据已经过期了，此时线程1去获得互斥锁，那么其他线程会进行阻塞，获得了锁的进程他会开启一个新线程去进行之前的重建缓存数据的逻辑，直到新开的线程完成者逻辑之后，才会释放锁，而线程1直接进行返回，假设现在线程3过来访问，由于线程2拿着锁，所以线程3无法获得锁，线程3也直接返回数据（但只能返回旧数据，牺牲了数据一致性，换取性能上的提高），只有等待线程2重建缓存数据之后，其他线程才能返回正确的数据</li>
 </ul>
 <p>这种方案巧妙在于，异步构建缓存数据，缺点是在重建完缓存数据之前，返回的都是脏数据</p>
-<p><img src="/Redis.assets/image-20231009202726781.png" srcset="/img/loading.gif" lazyload alt="image-20231009202726781"></p>
+<p><img src="/2023/12/29/Redis/image-20231009202726781.png" srcset="/img/loading.gif" lazyload alt="image-20231009202726781"></p>
 <p><strong>对比互斥锁与逻辑删除</strong></p>
 <ul>
 <li><code>互斥锁方案</code>：由于保证了互斥性，所以数据一致，且实现简单，只是加了一把锁而已，也没有其他的事情需要操心，所以没有额外的内存消耗，缺点在于有锁的情况，就可能死锁，所以只能串行执行，性能会受到影响</li>
@@ -789,7 +790,7 @@
 <li><strong>核心思路</strong>：相较于原来从缓存中查询不到数据后直接查询数据库而言，现在的方案是，进行查询之后，如果没有从缓存中查询到数据，则进行互斥锁的获取，获取互斥锁之后，判断是否获取到了锁，如果没获取到，则休眠一段时间，过一会儿再去尝试，知道获取到锁为止，才能进行查询</li>
 <li>如果获取到了锁的线程，则进行查询，将查询到的数据写入Redis，再释放锁，返回数据，利用互斥锁就能保证只有一个线程去执行数据库的逻辑，防止缓存击穿</li>
 </ul>
-<p><img src="/Redis.assets/image-20231009203518721.png" srcset="/img/loading.gif" lazyload alt="image-20231009203518721"></p>
+<p><img src="/2023/12/29/Redis/image-20231009203518721.png" srcset="/img/loading.gif" lazyload alt="image-20231009203518721"></p>
 <ul>
 <li><strong>操作锁的代码</strong></li>
 <li>核心思路就是利用redis的setnx方法来表示获取锁，如果redis没有这个key，则插入成功，返回1，如果已经存在这个key，则插入失败，返回0。在StringRedisTemplate中返回true&#x2F;false，我们可以根据返回值来判断是否有线程成功获取到了锁</li>
@@ -822,7 +823,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="/Redis.assets/image-20231011214836124.png" srcset="/img/loading.gif" lazyload alt="image-20231011214836124"></p>
+<p><img src="/2023/12/29/Redis/image-20231011214836124.png" srcset="/img/loading.gif" lazyload alt="image-20231011214836124"></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//这里需要声明一个线程池，因为下面我们需要新建一个现成来完成重构缓存</span><br><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-type">ExecutorService</span> <span class="hljs-variable">CACHE_REBUILD_EXECUTOR</span> <span class="hljs-operator">=</span> Executors.newFixedThreadPool(<span class="hljs-number">10</span>);<br><br><span class="hljs-meta">@Override</span><br><span class="hljs-keyword">public</span> Shop <span class="hljs-title function_">queryWithLogicalExpire</span><span class="hljs-params">(Long id)</span> &#123;<br>    <span class="hljs-comment">//1. 从redis中查询商铺缓存</span><br>    <span class="hljs-type">String</span> <span class="hljs-variable">json</span> <span class="hljs-operator">=</span> stringRedisTemplate.opsForValue().get(CACHE_SHOP_KEY + id);<br>    <span class="hljs-comment">//2. 如果未命中，则返回空</span><br>    <span class="hljs-keyword">if</span> (StrUtil.isBlank(json)) &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;<br>    &#125;<br>    <span class="hljs-comment">//3. 命中，将json反序列化为对象</span><br>    <span class="hljs-type">RedisData</span> <span class="hljs-variable">redisData</span> <span class="hljs-operator">=</span> JSONUtil.toBean(json, RedisData.class);<br>    <span class="hljs-comment">//3.1 将data转为Shop对象</span><br>    <span class="hljs-type">JSONObject</span> <span class="hljs-variable">shopJson</span> <span class="hljs-operator">=</span> (JSONObject) redisData.getData();<br>    <span class="hljs-type">Shop</span> <span class="hljs-variable">shop</span> <span class="hljs-operator">=</span> JSONUtil.toBean(shopJson, Shop.class);<br>    <span class="hljs-comment">//3.2 获取过期时间</span><br>    <span class="hljs-type">LocalDateTime</span> <span class="hljs-variable">expireTime</span> <span class="hljs-operator">=</span> redisData.getExpireTime();<br>    <span class="hljs-comment">//4. 判断是否过期</span><br>    <span class="hljs-keyword">if</span> (LocalDateTime.now().isBefore(time)) &#123;<br>        <span class="hljs-comment">//5. 未过期，直接返回商铺信息</span><br>        <span class="hljs-keyword">return</span> shop;<br>    &#125;<br>    <span class="hljs-comment">//6. 过期，尝试获取互斥锁</span><br>    <span class="hljs-type">boolean</span> <span class="hljs-variable">flag</span> <span class="hljs-operator">=</span> tryLock(LOCK_SHOP_KEY + id);<br>    <span class="hljs-comment">//7. 获取到了锁</span><br>    <span class="hljs-keyword">if</span> (flag) &#123;<br>        <span class="hljs-comment">//8. 开启独立线程</span><br>        CACHE_REBUILD_EXECUTOR.submit(() -&gt; &#123;<br>            <span class="hljs-keyword">try</span> &#123;<br>                <span class="hljs-built_in">this</span>.saveShop2Redis(id, LOCK_SHOP_TTL);<br>            &#125; <span class="hljs-keyword">catch</span> (Exception e) &#123;<br>                <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(e);<br>            &#125; <span class="hljs-keyword">finally</span> &#123;<br>                unlock(LOCK_SHOP_KEY + id);<br>            &#125;<br>        &#125;);<br>        <span class="hljs-comment">//9. 直接返回商铺信息</span><br>        <span class="hljs-keyword">return</span> shop;<br>    &#125;<br>    <span class="hljs-comment">//10. 未获取到锁，直接返回商铺信息</span><br>    <span class="hljs-keyword">return</span> shop;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <h4 id="封装Redis工具类"><a href="#封装Redis工具类" class="headerlink" title="封装Redis工具类"></a>封装Redis工具类</h4><p>基于StringRedisTemplate封装一个缓存工具类，需满足下列要求</p>
@@ -898,7 +899,7 @@
 </ul>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;shopId&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-number">1</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;title&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;100元代金券&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;subTitle&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;周一至周五可用&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;rules&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;全场通用\\n无需预约\\n可无限叠加&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;payValue&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-number">8000</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;actualValue&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-number">10000</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-number">1</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;stock&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-number">100</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;beginTime&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;2022-01-01T00:00:00&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;endTime&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;2022-10-31T23:59:59&quot;</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
 
-<h4 id="实现秒杀下单"><a href="#实现秒杀下单" class="headerlink" title="实现秒杀下单"></a>实现秒杀下单</h4><p><img src="/Redis.assets/image-20231013155355194.png" srcset="/img/loading.gif" lazyload alt="image-20231013155355194"></p>
+<h4 id="实现秒杀下单"><a href="#实现秒杀下单" class="headerlink" title="实现秒杀下单"></a>实现秒杀下单</h4><p><img src="/2023/12/29/Redis/image-20231013155355194.png" srcset="/img/loading.gif" lazyload alt="image-20231013155355194"></p>
 <p>VoucherOrderController</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@RestController</span><br><span class="hljs-meta">@RequestMapping(&quot;/voucher-order&quot;)</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">VoucherOrderController</span> &#123;<br>    <span class="hljs-meta">@Autowired</span><br>    <span class="hljs-keyword">private</span> IVoucherOrderService voucherOrderService;<br>    <span class="hljs-meta">@PostMapping(&quot;/seckill/&#123;id&#125;&quot;)</span><br>    <span class="hljs-keyword">public</span> Result <span class="hljs-title function_">seckillVoucher</span><span class="hljs-params">(<span class="hljs-meta">@PathVariable(&quot;id&quot;)</span> Long voucherId)</span> &#123;<br>        <span class="hljs-keyword">return</span> voucherOrderService.seckillVoucher(voucherId);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
@@ -950,7 +951,7 @@
 
 
 <p>以上逻辑的核心含义是：只要我扣减库存时的库存和之前我查询到的库存是一样的，就意味着没有人在中间修改过库存，那么此时就是安全的，但是以上这种方式通过测试发现会有很多失败的情况，失败的原因在于：在使用乐观锁过程中假设100个线程同时都拿到了100的库存，然后大家一起去进行扣减，但是100个人中只有1个人能扣减成功，其他的人在处理时，他们在扣减时，库存已经被修改过了，所以此时其他线程都会失败</p>
-<img src="Redis.assets/image-20231013162646868.png" srcset="/img/loading.gif" lazyload alt="image-20231013162646868" style="zoom:80%;" />
+<img src="image-20231013162646868.png" srcset="/img/loading.gif" lazyload alt="image-20231013162646868" style="zoom:80%;" />
 
 <ul>
 <li>那么我们继续完善代码，修改我们的逻辑，在这种场景，我们可以只判断是否有剩余优惠券，即只要数据库中的库存大于0，都能顺利完成扣减库存操作</li>
@@ -1012,7 +1013,7 @@
 <li>具体操作，我们使用<code>POSTMAN</code>发送两次请求，header携带同一用户的token，尝试用同一账号抢两张优惠券，发现是可行的。</li>
 <li>失败原因分析：由于我们部署了多个Tomcat，每个Tomcat都有一个属于自己的jvm，那么假设在服务器A的Tomcat内部，有两个线程，即线程1和线程2，这两个线程使用的是同一份代码，那么他们的锁对象是同一个，是可以实现互斥的。但是如果在Tomcat的内部，又有两个线程，但是他们的锁对象虽然写的和服务器A一样，但是锁对象却不是同一个，所以线程3和线程4可以实现互斥，但是却无法和线程1和线程2互斥</li>
 </ul>
-<p><img src="/Redis.assets/image-20231013193636000.png" srcset="/img/loading.gif" lazyload alt="image-20231013193636000"></p>
+<p><img src="/2023/12/29/Redis/image-20231013193636000.png" srcset="/img/loading.gif" lazyload alt="image-20231013193636000"></p>
 <ul>
 <li>这就是集群环境下，syn锁失效的原因，在这种情况下，我们需要使用分布式锁来解决这个问题，让锁不存在于每个jvm的内部，而是让所有jvm公用外部的一把锁（Redis）</li>
 </ul>
@@ -1020,13 +1021,13 @@
 <li>分布式锁：满足分布式系统或集群模式下多线程课件并且可以互斥的锁</li>
 <li>分布式锁的核心思想就是让大家共用同一把锁，那么我们就能锁住线程，不让线程进行，让程序串行执行，这就是分布式锁的核心思路</li>
 </ul>
-<p><img src="/Redis.assets/image-20231013200110785.png" srcset="/img/loading.gif" lazyload alt="image-20231013200110785"></p>
+<p><img src="/2023/12/29/Redis/image-20231013200110785.png" srcset="/img/loading.gif" lazyload alt="image-20231013200110785"></p>
 <ul>
 <li>常见的分布式锁有三种<ol>
 <li>MySQL：MySQL本身就带有锁机制，但是由于MySQL的性能一般，所以采用分布式锁的情况下，使用MySQL作为分布式锁比较少见</li>
 <li>Redis：Redis作为分布式锁是非常常见的一种使用方式，现在企业级开发中基本都是用Redis或者Zookeeper作为分布式锁，利用<code>SETNX</code>这个方法，如果插入Key成功，则表示获得到了锁，如果有人插入成功，那么其他人就回插入失败，无法获取到锁，利用这套逻辑完成<code>互斥</code>，从而实现分布式锁</li>
 <li>Zookeeper：Zookeeper也是企业级开发中较好的一种实现分布式锁的方案，但本文是学Redis的，所以这里就不过多阐述了</li>
-<li><img src="/Redis.assets/image-20231013200150659.png" srcset="/img/loading.gif" lazyload alt="image-20231013200150659"></li>
+<li><img src="/2023/12/29/Redis/image-20231013200150659.png" srcset="/img/loading.gif" lazyload alt="image-20231013200150659"></li>
 </ol>
 </li>
 </ul>
@@ -1085,7 +1086,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="/Redis.assets/image-20231014152403261.png" srcset="/img/loading.gif" lazyload alt="image-20231014152403261"></p>
+<p><img src="/2023/12/29/Redis/image-20231014152403261.png" srcset="/img/loading.gif" lazyload alt="image-20231014152403261"></p>
 <h4 id="解决Redis分布式锁误删问题"><a href="#解决Redis分布式锁误删问题" class="headerlink" title="解决Redis分布式锁误删问题"></a>解决Redis分布式锁误删问题</h4><ul>
 <li>需求：修改之前的分布式锁实现</li>
 <li>满足：在获取锁的时候存入线程标识（用UUID标识，在一个JVM中，ThreadId一般不会重复，但是我们现在是集群模式，有多个JVM，多个JVM之间可能会出现ThreadId重复的情况），在释放锁的时候先获取锁的线程标识，判断是否与当前线程标识一致<ul>
@@ -1113,7 +1114,7 @@
 <li>这就是删锁时的原子性问题</li>
 <li>因为线程1的拿锁，判断标识，删锁，不是原子操作，所以我们要防止刚刚的情况</li>
 </ul>
-<p><img src="/Redis.assets/image-20231015145922154.png" srcset="/img/loading.gif" lazyload alt="image-20231015145922154"></p>
+<p><img src="/2023/12/29/Redis/image-20231015145922154.png" srcset="/img/loading.gif" lazyload alt="image-20231015145922154"></p>
 <h4 id="Lua脚本解决多条命令原子性问题"><a href="#Lua脚本解决多条命令原子性问题" class="headerlink" title="Lua脚本解决多条命令原子性问题"></a>Lua脚本解决多条命令原子性问题</h4><ul>
 <li><p>Redis提供了Lua脚本功能，在一个脚本中编写多条Redis命令，确保多条命令执行时的原子性。</p>
 </li>
@@ -1249,7 +1250,7 @@
 <li>所以我们需要额外判断，method1和method2是否处于同一线程，如果是同一个线程，则可以拿到锁，但是state会<code>+1</code>，之后执行method2中的方法，释放锁，释放锁的时候也只是将state进行<code>-1</code>，只有减至0，才会真正释放锁</li>
 <li>由于我们需要额外存储一个state，所以用字符串型<code>SET NX EX</code>是不行的，需要用到<code>Hash</code>结构，但是<code>Hash</code>结构又没有<code>NX</code>这种方法，所以我们需要将原有的逻辑拆开，进行手动判断</li>
 </ul>
-<img src="Redis.assets/image-20231017162430690.png" srcset="/img/loading.gif" lazyload alt="image-20231017162430690" style="zoom:80%;" />
+<img src="image-20231017162430690.png" srcset="/img/loading.gif" lazyload alt="image-20231017162430690" style="zoom:80%;" />
 
 <p>为了保证原子性，所以流程图中的业务逻辑也是需要我们用Lua来实现的</p>
 <ul>
@@ -1262,7 +1263,7 @@
 </ul>
 <figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">local</span> key = KEYS[<span class="hljs-number">1</span>];<br><span class="hljs-keyword">local</span> threadId = ARGV[<span class="hljs-number">1</span>];<br><span class="hljs-keyword">local</span> releaseTime = ARGV[<span class="hljs-number">2</span>];<br><span class="hljs-comment">-- 如果锁不是自己的</span><br><span class="hljs-keyword">if</span> (redis.<span class="hljs-keyword">call</span>(<span class="hljs-string">&#x27;HEXISTS&#x27;</span>, key, threadId) == <span class="hljs-number">0</span>) <span class="hljs-keyword">then</span><br>    <span class="hljs-keyword">return</span> nil; <span class="hljs-comment">-- 直接返回</span><br><span class="hljs-keyword">end</span>;<br><span class="hljs-comment">-- 锁是自己的，锁计数-1，还是用hincrby，不过自增长的值为-1</span><br><span class="hljs-keyword">local</span> count = redis.<span class="hljs-keyword">call</span>(<span class="hljs-string">&#x27;hincrby&#x27;</span>, key, threadId, <span class="hljs-number">-1</span>);<br><span class="hljs-comment">-- 判断重入次数为多少</span><br><span class="hljs-keyword">if</span> (count &gt; <span class="hljs-number">0</span>) <span class="hljs-keyword">then</span><br>    <span class="hljs-comment">-- 大于0，重置有效期</span><br>    redis.<span class="hljs-keyword">call</span>(<span class="hljs-string">&#x27;expire&#x27;</span>, key, releaseTime);<br>    <span class="hljs-keyword">return</span> nil;<br><span class="hljs-keyword">else</span><br>    <span class="hljs-comment">-- 否则直接释放锁</span><br>    redis.<span class="hljs-keyword">call</span>(<span class="hljs-string">&#x27;del&#x27;</span>, key);<br>    <span class="hljs-keyword">return</span> nil;<br><span class="hljs-keyword">end</span>;<br></code></pre></td></tr></table></figure>
 
-<p><img src="/Redis.assets/image-20231017162802476.png" srcset="/img/loading.gif" lazyload alt="image-20231017162802476"></p>
+<p><img src="/2023/12/29/Redis/image-20231017162802476.png" srcset="/img/loading.gif" lazyload alt="image-20231017162802476"></p>
 <h4 id="Redisson锁的MutiLock原理"><a href="#Redisson锁的MutiLock原理" class="headerlink" title="Redisson锁的MutiLock原理"></a>Redisson锁的MutiLock原理</h4><ul>
 <li>为了提高Redis的可用性，我们会搭建集群或者主从，现在以主从为例</li>
 <li>此时我们去写命令，写在主机上，主机会将数据同步给从机，但是假设主机还没来得及把数据写入到从机去的时候，主机宕机了</li>
@@ -1303,7 +1304,7 @@
 <li>在这六个步骤中，有很多操作都是要去操作数据库的，而且还是一个线程串行执行，这样就会导致我们的程序执行很慢，所以我们需要异步程序执行，那么如何加速呢？</li>
 <li><strong>优化方案</strong>：我们将耗时较短的逻辑判断放到Redis中，例如：库存是否充足，是否一人一单这样的操作，只要满足这两条操作，那我们是一定可以下单成功的，不用等数据真的写进数据库，我们直接告诉用户下单成功就好了。然后后台再开一个线程，后台线程再去慢慢执行队列里的消息，这样我们就能很快的完成下单业务。</li>
 </ul>
-<img src="Redis.assets/image-20231017185940643.png" srcset="/img/loading.gif" lazyload alt="image-20231017185940643" style="zoom:80%;" />
+<img src="image-20231017185940643.png" srcset="/img/loading.gif" lazyload alt="image-20231017185940643" style="zoom:80%;" />
 
 <ul>
 <li>但是这里还存在两个难点<ol>
@@ -1317,7 +1318,7 @@
 <li>我们现在来看整体思路：当用户下单之后，判断库存是否充足，只需要取Redis中根据key找对应的value是否大于0即可，如果不充足，则直接结束。如果充足，则在Redis中判断用户是否可以下单，如果set集合中没有该用户的下单数据，则可以下单，并将userId和优惠券存入到Redis中，并且返回0，整个过程需要保证是原子性的，所以我们要用Lua来操作，同时由于我们需要在Redis中查询优惠券信息，所以在我们新增秒杀优惠券的同时，需要将优惠券信息保存到Redis中</li>
 <li>完成以上逻辑判断时，我们只需要判断当前Redis中的返回值是否为0，如果是0，则表示可以下单，将信息保存到queue中去，然后返回，开一个线程来异步下单，其阿奴单可以通过返回订单的id来判断是否下单成功</li>
 </ul>
-<img src="Redis.assets/image-20231017190033013.png" srcset="/img/loading.gif" lazyload alt="image-20231017190033013" style="zoom:80%;" />
+<img src="image-20231017190033013.png" srcset="/img/loading.gif" lazyload alt="image-20231017190033013" style="zoom:80%;" />
 
 <h4 id="Redis完成秒杀资格判断"><a href="#Redis完成秒杀资格判断" class="headerlink" title="Redis完成秒杀资格判断"></a>Redis完成秒杀资格判断</h4><ul>
 <li>需求：<ol>
@@ -1943,7 +1944,7 @@
 </ol>
 </li>
 <li><pre><code class="hljs">拉模式
-<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><code class="hljs autohotkey"><br>  ：也叫读扩散<br><br>  - 该模式的核心含义是：当张三和李四、王五发了消息之后，都会保存到自己的发件箱中，如果赵六要读取消息，那么他会读取他自己的收件箱，此时系统会从他关注的人群中，将他关注人的信息全都进行拉取，然后进行排序<br>  - 优点：比较节约空间，因为赵六在读取信息时，并没有重复读取，并且读取完之后，可以将他的收件箱清除<br>  - 缺点：有延迟，当用户读取数据时，才会去关注的人的时发件箱中拉取信息，假设该用户关注了海量用户，那么此时就会拉取很多信息，对服务器压力巨大<br><br>&lt;img src=<span class="hljs-string">&quot;Redis.assets/image-20231019161718987.png&quot;</span> alt=<span class="hljs-string">&quot;image-20231019161718987&quot;</span> style=<span class="hljs-string">&quot;zoom:80%;&quot;</span> /&gt;<br><br><br><br><br><br>`推模式`：也叫写扩散<br><br>- 推模式是没有写邮箱的，当张三写了一个内容，此时会主动把张三写的内容发送到它粉丝的收件箱中，假设此时李四再来读取，就不用再去临时拉取了<br>- 优点：时效快，不用临时拉取<br>- 缺点：内存压力大，假设一个大V发了一个动态，很多人关注他，那么就会写很多份数据到粉丝那边去<br><br>&lt;img src=<span class="hljs-string">&quot;Redis.assets/image-20231019161743023.png&quot;</span> alt=<span class="hljs-string">&quot;image-20231019161743023&quot;</span> style=<span class="hljs-string">&quot;zoom:80%;&quot;</span> /&gt;<br><br><br><br>`推拉结合`：页脚读写混合，兼具推和拉两种模式的优点<br><br>- 推拉模式是一个折中的方案，站在发件人这一边，如果是普通人，那么我们采用写扩散的方式，直接把数据写入到他的粉丝收件箱中，因为普通人的粉丝数量较少，所以这样不会产生太大压力。但如果是大V，那么他是直接将数据写入一份到发件箱中去，在直接写一份到活跃粉丝的收件箱中，站在收件人这边来看，如果是活跃粉丝，那么大V和普通人发的都会写到自己的收件箱里，但如果是普通粉丝，由于上线不是很频繁，所以等他们上线的时候，再从发件箱中去拉取信息。<br><br>![image-<span class="hljs-number">20231019161825268</span>](Redis.assets/image-<span class="hljs-number">20231019161825268</span>.png)<br><br>#### 推送到粉丝收件箱<br><br>- 需求：<br>  <span class="hljs-number">1</span>. 修改新增探店笔记的业务，在保存blog到数据库的同时，推送到粉丝的收件箱<br>  <span class="hljs-number">2</span>. 收件箱满足可以根据时间戳排序，必须使用Redis的数据结构实现<br>  <span class="hljs-number">3</span>. 查询收件箱数据时，课实现分页查询<br>- Feed流中的数据会不断更新，所以数据的角标也会不断变化，所以我们不能使用传统的分页模式<br>- 假设在t1时刻，我们取读取第一页，此时page = <span class="hljs-number">1</span>，size = <span class="hljs-number">5</span>，那么我们拿到的就是`10~<span class="hljs-number">6</span>`这几条记录，假设t2时刻有发布了一条新纪录，那么在t3时刻，我们来读取第二页，此时page = <span class="hljs-number">2</span>，size = <span class="hljs-number">5</span>，那么此时读取的数据是从<span class="hljs-number">6</span>开始的，读到的是`6~<span class="hljs-number">2</span>`，那么我们就读到了重复的数据，所以我们要使用Feed流的分页，不能使用传统的分页<br><br>&lt;img src=<span class="hljs-string">&quot;Redis.assets/image-20231020160618479.png&quot;</span> alt=<span class="hljs-string">&quot;image-20231020160618479&quot;</span> style=<span class="hljs-string">&quot;zoom:80%;&quot;</span> /&gt;<br><br>Feed流的滚动分页<br><br>- 我们需要记录每次操作的最后一条，然后从这个位置去开始读数据<br>- 举个例子：我们从t1时刻开始，拿到第一页数据，拿到了`10~<span class="hljs-number">6</span>`，然后记录下当前最后一次读取的记录，就是<span class="hljs-number">6</span>，t2时刻发布了新纪录，此时这个<span class="hljs-number">11</span>在最上面，但不会影响我们之前拿到的<span class="hljs-number">6</span>，此时t3时刻来读取第二页，第二页读数据的时候，从`6-<span class="hljs-number">1</span>=<span class="hljs-number">5</span>`开始读，这样就拿到了`5~<span class="hljs-number">1</span>`的记录。我们在这个地方可以使用SortedSet来做，使用时间戳来充当表中的`1~<span class="hljs-number">10</span>`<br><br>&lt;img src=<span class="hljs-string">&quot;Redis.assets/image-20231020160655657.png&quot;</span> alt=<span class="hljs-string">&quot;image-20231020160655657&quot;</span> style=<span class="hljs-string">&quot;zoom:80%;&quot;</span> /&gt;<br><br>- 核心思路：我们保存完探店笔记后，获取当前用户的粉丝列表，然后将数据推送给粉丝<br>- 那现在我们就需要修改保存笔记的方法<br><br>```java<br>@Override<br>public Result saveBlog(Blog blog) &#123;<br>    // 获取登录用户<br>    UserDTO user = UserHolder.getUser()<span class="hljs-comment">;</span><br>    blog.setUserId(user.getId())<span class="hljs-comment">;</span><br>    // 保存探店博文<br>    save(blog)<span class="hljs-comment">;</span><br>    // 条件构造器<br>    LambdaQueryWrapper&lt;Follow&gt; queryWrapper = <span class="hljs-keyword">new</span> LambdaQueryWrapper&lt;&gt;()<span class="hljs-comment">;</span><br>    // 从follow表最中，查找当前用户的粉丝  select * from follow where follow_user_id = user_id<br><span class="hljs-title">    queryWrapper.eq(Follow::</span>getFollowUserId, user.getId())<span class="hljs-comment">;</span><br>    //获取当前用户的粉丝<br>    List&lt;Follow&gt; follows = followService.list(queryWrapper)<span class="hljs-comment">;</span><br><span class="hljs-title">    for (Follow follow :</span> follows) &#123;<br>        Long userId = follow.getUserId()<span class="hljs-comment">;</span><br>        String key = FEED_KEY + userId<span class="hljs-comment">;</span><br>        //推送数据<br>        stringRedisTemplate.opsForZSet().add(key, blog.getId().toString(), System.currentTimeMillis())<span class="hljs-comment">;</span><br>    &#125;<br>    // 返回id<br>    <span class="hljs-keyword">return</span> Result.ok(blog.getId())<span class="hljs-comment">;</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><code class="hljs autohotkey"><br>  ：也叫读扩散<br><br>  - 该模式的核心含义是：当张三和李四、王五发了消息之后，都会保存到自己的发件箱中，如果赵六要读取消息，那么他会读取他自己的收件箱，此时系统会从他关注的人群中，将他关注人的信息全都进行拉取，然后进行排序<br>  - 优点：比较节约空间，因为赵六在读取信息时，并没有重复读取，并且读取完之后，可以将他的收件箱清除<br>  - 缺点：有延迟，当用户读取数据时，才会去关注的人的时发件箱中拉取信息，假设该用户关注了海量用户，那么此时就会拉取很多信息，对服务器压力巨大<br><br>&lt;img src=<span class="hljs-string">&quot;image-20231019161718987.png&quot;</span> alt=<span class="hljs-string">&quot;image-20231019161718987&quot;</span> style=<span class="hljs-string">&quot;zoom:80%;&quot;</span> /&gt;<br><br><br><br><br><br>`推模式`：也叫写扩散<br><br>- 推模式是没有写邮箱的，当张三写了一个内容，此时会主动把张三写的内容发送到它粉丝的收件箱中，假设此时李四再来读取，就不用再去临时拉取了<br>- 优点：时效快，不用临时拉取<br>- 缺点：内存压力大，假设一个大V发了一个动态，很多人关注他，那么就会写很多份数据到粉丝那边去<br><br>&lt;img src=<span class="hljs-string">&quot;image-20231019161743023.png&quot;</span> alt=<span class="hljs-string">&quot;image-20231019161743023&quot;</span> style=<span class="hljs-string">&quot;zoom:80%;&quot;</span> /&gt;<br><br><br><br>`推拉结合`：页脚读写混合，兼具推和拉两种模式的优点<br><br>- 推拉模式是一个折中的方案，站在发件人这一边，如果是普通人，那么我们采用写扩散的方式，直接把数据写入到他的粉丝收件箱中，因为普通人的粉丝数量较少，所以这样不会产生太大压力。但如果是大V，那么他是直接将数据写入一份到发件箱中去，在直接写一份到活跃粉丝的收件箱中，站在收件人这边来看，如果是活跃粉丝，那么大V和普通人发的都会写到自己的收件箱里，但如果是普通粉丝，由于上线不是很频繁，所以等他们上线的时候，再从发件箱中去拉取信息。<br><br>![image-<span class="hljs-number">20231019161825268</span>](image-<span class="hljs-number">20231019161825268</span>.png)<br><br>#### 推送到粉丝收件箱<br><br>- 需求：<br>  <span class="hljs-number">1</span>. 修改新增探店笔记的业务，在保存blog到数据库的同时，推送到粉丝的收件箱<br>  <span class="hljs-number">2</span>. 收件箱满足可以根据时间戳排序，必须使用Redis的数据结构实现<br>  <span class="hljs-number">3</span>. 查询收件箱数据时，课实现分页查询<br>- Feed流中的数据会不断更新，所以数据的角标也会不断变化，所以我们不能使用传统的分页模式<br>- 假设在t1时刻，我们取读取第一页，此时page = <span class="hljs-number">1</span>，size = <span class="hljs-number">5</span>，那么我们拿到的就是`10~<span class="hljs-number">6</span>`这几条记录，假设t2时刻有发布了一条新纪录，那么在t3时刻，我们来读取第二页，此时page = <span class="hljs-number">2</span>，size = <span class="hljs-number">5</span>，那么此时读取的数据是从<span class="hljs-number">6</span>开始的，读到的是`6~<span class="hljs-number">2</span>`，那么我们就读到了重复的数据，所以我们要使用Feed流的分页，不能使用传统的分页<br><br>&lt;img src=<span class="hljs-string">&quot;image-20231020160618479.png&quot;</span> alt=<span class="hljs-string">&quot;image-20231020160618479&quot;</span> style=<span class="hljs-string">&quot;zoom:80%;&quot;</span> /&gt;<br><br>Feed流的滚动分页<br><br>- 我们需要记录每次操作的最后一条，然后从这个位置去开始读数据<br>- 举个例子：我们从t1时刻开始，拿到第一页数据，拿到了`10~<span class="hljs-number">6</span>`，然后记录下当前最后一次读取的记录，就是<span class="hljs-number">6</span>，t2时刻发布了新纪录，此时这个<span class="hljs-number">11</span>在最上面，但不会影响我们之前拿到的<span class="hljs-number">6</span>，此时t3时刻来读取第二页，第二页读数据的时候，从`6-<span class="hljs-number">1</span>=<span class="hljs-number">5</span>`开始读，这样就拿到了`5~<span class="hljs-number">1</span>`的记录。我们在这个地方可以使用SortedSet来做，使用时间戳来充当表中的`1~<span class="hljs-number">10</span>`<br><br>&lt;img src=<span class="hljs-string">&quot;image-20231020160655657.png&quot;</span> alt=<span class="hljs-string">&quot;image-20231020160655657&quot;</span> style=<span class="hljs-string">&quot;zoom:80%;&quot;</span> /&gt;<br><br>- 核心思路：我们保存完探店笔记后，获取当前用户的粉丝列表，然后将数据推送给粉丝<br>- 那现在我们就需要修改保存笔记的方法<br><br>```java<br>@Override<br>public Result saveBlog(Blog blog) &#123;<br>    // 获取登录用户<br>    UserDTO user = UserHolder.getUser()<span class="hljs-comment">;</span><br>    blog.setUserId(user.getId())<span class="hljs-comment">;</span><br>    // 保存探店博文<br>    save(blog)<span class="hljs-comment">;</span><br>    // 条件构造器<br>    LambdaQueryWrapper&lt;Follow&gt; queryWrapper = <span class="hljs-keyword">new</span> LambdaQueryWrapper&lt;&gt;()<span class="hljs-comment">;</span><br>    // 从follow表最中，查找当前用户的粉丝  select * from follow where follow_user_id = user_id<br><span class="hljs-title">    queryWrapper.eq(Follow::</span>getFollowUserId, user.getId())<span class="hljs-comment">;</span><br>    //获取当前用户的粉丝<br>    List&lt;Follow&gt; follows = followService.list(queryWrapper)<span class="hljs-comment">;</span><br><span class="hljs-title">    for (Follow follow :</span> follows) &#123;<br>        Long userId = follow.getUserId()<span class="hljs-comment">;</span><br>        String key = FEED_KEY + userId<span class="hljs-comment">;</span><br>        //推送数据<br>        stringRedisTemplate.opsForZSet().add(key, blog.getId().toString(), System.currentTimeMillis())<span class="hljs-comment">;</span><br>    &#125;<br>    // 返回id<br>    <span class="hljs-keyword">return</span> Result.ok(blog.getId())<span class="hljs-comment">;</span><br>&#125;<br></code></pre></td></tr></table></figure>
 </code></pre>
 </li>
 </ul>
@@ -2378,6 +2379,34 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Java/" class="category-chain-item">Java</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%8E%9F%E5%88%9B/" class="print-no-link">#原创</a>
+      
+    </div>
   
 </div>
 
@@ -2387,7 +2416,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
+      <div>Redis</div>
       <div>http://example.com/2023/12/29/Redis/</div>
     </div>
     <div class="license-meta">
@@ -2436,8 +2465,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/12/29/TestArticle/" title="TestArticle">
-                        <span class="hidden-mobile">TestArticle</span>
+                      <a href="/2023/12/29/test/" title="test">
+                        <span class="hidden-mobile">test</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
